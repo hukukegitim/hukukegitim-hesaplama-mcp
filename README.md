@@ -4,7 +4,7 @@
 
 Asistan tahmin yürütmek yerine hesabı doğrudan Hukuk Eğitim'in kendi hesaplayıcısına yaptırır; sonuç tarife sürümü, yasal dayanak ve notlarla birlikte gelir. Hesap mantığı sitede durur, bu depo yalnızca bağlantı bilgisini ve kullanım rehberini içerir.
 
-> **Sunucu adresi:** `https://hukukegitim.com/mcp` (Streamable HTTP, giriş ve API anahtarı gerekmez)
+> **Sunucu adresi:** `https://hukukegitim.com/mcp/hesaplama` (Streamable HTTP, giriş ve API anahtarı gerekmez)
 
 ## Araçlar
 
@@ -24,14 +24,14 @@ Yeni araçlar eklendikçe sunucunun araç listesinde kendiliğinden görünür; 
 
 ## Kurulum
 
-**Claude:** Ayarlar → Bağlayıcılar → Özel bağlayıcı ekle → adres olarak `https://hukukegitim.com/mcp` girin. Kimlik doğrulama yok.
+**Claude:** Ayarlar → Bağlayıcılar → Özel bağlayıcı ekle → adres olarak `https://hukukegitim.com/mcp/hesaplama` girin. Kimlik doğrulama yok.
 
-**ChatGPT:** Geliştirici modunda yeni bağlayıcı ekleyin → adres `https://hukukegitim.com/mcp`, kimlik doğrulama "Yok".
+**ChatGPT:** Geliştirici modunda yeni bağlayıcı ekleyin → adres `https://hukukegitim.com/mcp/hesaplama`, kimlik doğrulama "Yok".
 
 **Claude Code:**
 
 ```bash
-claude mcp add --transport http hukukegitim-hesaplama https://hukukegitim.com/mcp
+claude mcp add --transport http hukukegitim-hesaplama https://hukukegitim.com/mcp/hesaplama
 ```
 
 ## Deneyin
