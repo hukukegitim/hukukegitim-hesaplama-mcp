@@ -2,7 +2,7 @@
 
 [hukukegitim.com](https://hukukegitim.com/hesaplamaaraclari.aspx) üzerindeki hukuki hesaplama araçlarını yapay zekâ asistanlarına (Claude, ChatGPT, Cursor vb.) bağlayan **tek bir MCP sunucusu**.
 
-Asistan tahmin yürütmek yerine hesabı doğrudan Hukuk Eğitim'in kendi hesaplayıcısına yaptırır; sonuç tarife sürümü, yasal dayanak ve notlarla birlikte gelir. Hesap mantığı sitede durur, bu depo yalnızca bağlantı bilgisini ve kullanım rehberini içerir.
+Asistan tahmin yürütmek yerine hesabı doğrudan Hukuk Eğitim'in kendi hesaplayıcısına yaptırır; sonuç tarife sürümü, yasal dayanak ve notlarla birlikte gelir. Hesap mantığı Hukuk Eğitim'in sunucusunda çalışır; bu depo yalnızca bağlantı bilgisini ve kullanım rehberini içerir.
 
 > **Sunucu adresi:** `https://mcp.hukukegitim.com/hesaplama` (Streamable HTTP, giriş ve API anahtarı gerekmez)
 >
@@ -12,17 +12,28 @@ Asistan tahmin yürütmek yerine hesabı doğrudan Hukuk Eğitim'in kendi hesapl
 
 ## Araçlar
 
-| Araç | Ne hesaplar | Durum |
-|---|---|---|
-| `vekalet-ucreti` | Avukatlık Asgari Ücret Tarifesi'ne (2025-2026) göre nispi/maktu vekalet ücreti | Yayında |
-| `serbest-meslek-makbuzu` | Brüt–net, stopaj ve KDV dâhil/hariç dönüşümleri, makbuz kalemleri | Yayında |
-| `arabuluculuk` | Arabuluculuk ücreti, makbuz ve dava şartı süreleri | Yakında |
-| `iscilik-alacaklari` | Kıdem, ihbar, yıllık izin, fazla mesai, hafta tatili, UBGT; brüt–net maaş | Yakında |
-| `tazminat` | Destekten yoksun kalma, sürekli/geçici iş göremezlik, bakıcı gideri | Yakında |
-| `arac-deger-kaybi` | Araç değer kaybı | Yakında |
-| `infaz` | Koşullu salıverilme, denetimli serbestlik, bihakkın tahliye tarihleri | Yakında |
-| `zamanasimi` | Özel hukuk, ceza davası ve infaz zamanaşımı | Yakında |
-| `mal-rejimi-tasfiyesi` | Edinilmiş mallara katılma rejiminde katılma alacağı ve değer artış payı | Yakında |
+Şu an **18 araç** yayında:
+
+| Araç | Ne hesaplar |
+|---|---|
+| `vekalet-ucreti` | Avukatlık Asgari Ücret Tarifesi'ne (2025-2026) göre nispi/maktu vekalet ücreti |
+| `serbest-meslek-makbuzu` | Brüt–net, stopaj ve KDV dâhil/hariç dönüşümleri, makbuz kalemleri |
+| `iscilik-alacaklari` | Kıdem ve ihbar tazminatı, yıllık izin, fazla mesai, hafta tatili, UBGT; brüt ve net (SGK, vergi, damga, asgari ücret istisnası) |
+| `maas-brut-net` | Aylık bordro: brütten nete veya netten brüte maaş (SGK, işsizlik, gelir ve damga vergisi) |
+| `arac-deger-kaybi` | Araç değer kaybı (1 Temmuz 2026 öncesi mülga Ek-1 formülü, sonrası ikinci el değer farkı) |
+| `infaz-yatar` | Koşullu salıverilme, denetimli serbestlik ve bihakkın tahliye tarihleri |
+| `mal-rejimi-tasfiyesi` | Edinilmiş mallara katılma rejiminde katılma alacağı ve takas |
+| `mal-rejimi-deger-artis-payi` | Edinilmiş mallara katılma rejiminde değer artış payı |
+| `arabuluculuk-ucreti` | Arabuluculuk ücreti (2026 tarifesi: nispi, saat ücreti, seri ve kira uyuşmazlıkları, taraf payı) |
+| `arabuluculuk-makbuz` | Arabuluculuk serbest meslek makbuzu dökümü |
+| `arabuluculuk-sureler` | Dava şartı arabuluculukta süreler ve son tarihler |
+| `zamanasimi-ozel-hukuk` | Özel hukukta zamanaşımı (kesilme ve durma ile) |
+| `zamanasimi-ceza-dava` | Ceza davası zamanaşımı |
+| `zamanasimi-ceza-infaz` | Ceza infaz zamanaşımı |
+| `tazminat-destekten-yoksun-kalma` | Ölüm: destekten yoksun kalma tazminatı |
+| `tazminat-surekli-is-goremezlik` | Sürekli iş göremezlik tazminatı |
+| `tazminat-gecici-is-goremezlik` | Geçici iş göremezlik tazminatı |
+| `tazminat-bakici-gideri` | Bakıcı gideri tazminatı |
 
 Yeni araçlar eklendikçe sunucunun araç listesinde kendiliğinden görünür; bağlantıyı yeniden kurmanız gerekmez. Güncel liste için asistanınızdan araçları listelemesini isteyin.
 
@@ -44,6 +55,7 @@ claude mcp add --transport http hukukegitim-hesaplama https://mcp.hukukegitim.co
 |---|---|
 | "2,5 milyon TL'lik asliye davasında vekalet ücreti ne olur?" | 367.000 TL |
 | "Net 12.345,67 TL KDV hariç makbuz kes, stopaj %20, KDV %20" | KDV dâhil brüt 18.518,51 TL |
+| "Haziranda 45.000 TL brüt maaşın neti ne kadar?" | 34.720,48 TL |
 
 ## Girdi kuralları
 
