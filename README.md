@@ -39,9 +39,9 @@ Yeni araçlar eklendikçe sunucunun araç listesinde kendiliğinden görünür; 
 
 ## Kurulum
 
-**Claude:** Ayarlar → Bağlayıcılar → Özel bağlayıcı ekle → adres olarak `https://mcp.hukukegitim.com/hesaplama` girin. Kimlik doğrulama yok.
+**Claude:** Ayarlar → Bağlayıcılar → Özel bağlayıcı ekle → ad olarak `Hukuk Eğitim Hesaplama`, adres olarak `https://mcp.hukukegitim.com/hesaplama` girin. Kimlik doğrulama yok.
 
-**ChatGPT:** Geliştirici modunda yeni bağlayıcı ekleyin → adres `https://mcp.hukukegitim.com/hesaplama`, kimlik doğrulama "Yok".
+**ChatGPT:** Geliştirici modunda yeni bağlayıcı ekleyin → ad `Hukuk Eğitim Hesaplama`, adres `https://mcp.hukukegitim.com/hesaplama`, kimlik doğrulama "Yok".
 
 **Claude Code:**
 
