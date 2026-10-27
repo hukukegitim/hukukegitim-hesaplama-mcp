@@ -4,11 +4,11 @@
 
 Asistan tahmin yürütmek yerine hesabı doğrudan Hukuk Eğitim'in kendi hesaplayıcısına yaptırır; sonuç tarife sürümü, yasal dayanak ve notlarla birlikte gelir. Hesap mantığı sitede durur, bu depo yalnızca bağlantı bilgisini ve kullanım rehberini içerir.
 
-> **Sunucu adresi:** `https://hukukegitim.com/mcp/hesaplama` (Streamable HTTP, giriş ve API anahtarı gerekmez)
+> **Sunucu adresi:** `https://mcp.hukukegitim.com/hesaplama` (Streamable HTTP, giriş ve API anahtarı gerekmez)
 >
-> Hukuk Eğitim'in tüm MCP sunucularının listesi: [hukukegitim.com/mcp](https://hukukegitim.com/mcp)
+> Hukuk Eğitim'in tüm MCP sunucularının listesi: [mcp.hukukegitim.com](https://mcp.hukukegitim.com)
 
-> **Adres değişikliği:** Hesaplama sunucusu ilk günlerde `https://hukukegitim.com/mcp` adresindeydi. Bu adres geçiş süresince çalışmaya devam ediyor, ancak **bağlayıcınızı `https://hukukegitim.com/mcp/hesaplama` ile güncelleyin.** Eski adres kullanım bitince kaldırılacak; `/mcp` artık tüm MCP'leri gösteren sayfadır.
+> **Adres değişikliği:** Hesaplama sunucusu önce `https://hukukegitim.com/mcp`, ardından `https://hukukegitim.com/mcp/hesaplama` adresindeydi. Bu eski adresler şimdilik yeni adrese yönlendiriliyor (HTTP 307), mevcut bağlayıcılar çalışmaya devam eder; yine de **bağlayıcınızı `https://mcp.hukukegitim.com/hesaplama` ile güncelleyin.** Eski adresler ileride kaldırılacak.
 
 ## Araçlar
 
@@ -28,14 +28,14 @@ Yeni araçlar eklendikçe sunucunun araç listesinde kendiliğinden görünür; 
 
 ## Kurulum
 
-**Claude:** Ayarlar → Bağlayıcılar → Özel bağlayıcı ekle → adres olarak `https://hukukegitim.com/mcp/hesaplama` girin. Kimlik doğrulama yok.
+**Claude:** Ayarlar → Bağlayıcılar → Özel bağlayıcı ekle → adres olarak `https://mcp.hukukegitim.com/hesaplama` girin. Kimlik doğrulama yok.
 
-**ChatGPT:** Geliştirici modunda yeni bağlayıcı ekleyin → adres `https://hukukegitim.com/mcp/hesaplama`, kimlik doğrulama "Yok".
+**ChatGPT:** Geliştirici modunda yeni bağlayıcı ekleyin → adres `https://mcp.hukukegitim.com/hesaplama`, kimlik doğrulama "Yok".
 
 **Claude Code:**
 
 ```bash
-claude mcp add --transport http hukukegitim-hesaplama https://hukukegitim.com/mcp/hesaplama
+claude mcp add --transport http hukukegitim-hesaplama https://mcp.hukukegitim.com/hesaplama
 ```
 
 ## Deneyin
