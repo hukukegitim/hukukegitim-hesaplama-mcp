@@ -5,6 +5,10 @@
 Asistan tahmin yürütmek yerine hesabı doğrudan Hukuk Eğitim'in kendi hesaplayıcısına yaptırır; sonuç tarife sürümü, yasal dayanak ve notlarla birlikte gelir. Hesap mantığı sitede durur, bu depo yalnızca bağlantı bilgisini ve kullanım rehberini içerir.
 
 > **Sunucu adresi:** `https://hukukegitim.com/mcp/hesaplama` (Streamable HTTP, giriş ve API anahtarı gerekmez)
+>
+> Hukuk Eğitim'in tüm MCP sunucularının listesi: [hukukegitim.com/mcp](https://hukukegitim.com/mcp)
+
+> **Adres değişikliği:** Hesaplama sunucusu ilk günlerde `https://hukukegitim.com/mcp` adresindeydi. Bu adres geçiş süresince çalışmaya devam ediyor, ancak **bağlayıcınızı `https://hukukegitim.com/mcp/hesaplama` ile güncelleyin.** Eski adres kullanım bitince kaldırılacak; `/mcp` artık tüm MCP'leri gösteren sayfadır.
 
 ## Araçlar
 
@@ -46,6 +50,7 @@ claude mcp add --transport http hukukegitim-hesaplama https://hukukegitim.com/mc
 - Tutarlar **sayı** olarak gönderilir (`60000.5`). `60.000,50 TL` biçimi kabul edilmez; asistan bunu sizin yerinize dönüştürür.
 - Tarihler `YYYY-AA-GG` biçimindedir.
 - Hatalı girdide araç hangi alanın neden reddedildiğini Türkçe bildirir.
+- Her cevapta kısa bir `ozet` ve sitedeki ayrıntılı hesap sayfasının bağlantısı (`kaynak`) da bulunur.
 
 ## Sınırlar
 
