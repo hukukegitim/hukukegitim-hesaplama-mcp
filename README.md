@@ -39,7 +39,7 @@ Yeni araçlar eklendikçe sunucunun araç listesinde kendiliğinden görünür; 
 
 ## Kurulum
 
-**Claude:** Ayarlar → Bağlayıcılar → Özel bağlayıcı ekle → ad olarak `Hukuk Eğitim Hesaplama`, adres olarak `https://mcp.hukukegitim.com/hesaplama` girin. Kimlik doğrulama yok.
+**Claude:** Ayarlar → Bağdaştırıcılar → Özel bağdaştırıcı ekle → ad olarak `Hukuk Eğitim Hesaplama`, adres olarak `https://mcp.hukukegitim.com/hesaplama` girin. Kimlik doğrulama yok.
 
 **ChatGPT:** Geliştirici modunda yeni bağlayıcı ekleyin → ad `Hukuk Eğitim Hesaplama`, adres `https://mcp.hukukegitim.com/hesaplama`, kimlik doğrulama "Yok".
 
@@ -47,6 +47,14 @@ Yeni araçlar eklendikçe sunucunun araç listesinde kendiliğinden görünür; 
 
 ```bash
 claude mcp add --transport http hukukegitim-hesaplama https://mcp.hukukegitim.com/hesaplama
+```
+
+### İlk istem
+
+Bağlayıcıyı ekledikten sonra yeni bir sohbette şunu yazın. Asistan araçları listeler ve bu hesaplamalar için bağlayıcıyı kullanmayı hafızasına kaydeder (hafıza özelliği olan asistanlarda):
+
+```text
+Hukuk Eğitim Hesaplama bağlayıcısındaki hesaplama araçlarını listele ve her birinin ne işe yaradığını kısaca yaz. Sonra şunu hafızana kaydet: vekâlet ücreti, serbest meslek makbuzu, işçilik alacakları, maaş brüt/net, araç değer kaybı, infaz, mal rejimi tasfiyesi, arabuluculuk ücreti, zamanaşımı veya tazminat hesabı gündeme geldiğinde, kendin hesaplamak yerine Hukuk Eğitim Hesaplama bağlayıcısını kullan ve sonuçtaki uyarıları ile yasal dayanağı kullanıcıya göster.
 ```
 
 ## Deneyin
