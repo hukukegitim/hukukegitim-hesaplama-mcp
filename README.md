@@ -12,7 +12,7 @@ Asistan tahmin yürütmek yerine hesabı doğrudan Hukuk Eğitim'in kendi hesapl
 
 ## Araçlar
 
-Şu an **18 araç** yayında:
+Şu an **19 araç** yayında:
 
 | Araç | Ne hesaplar |
 |---|---|
@@ -24,6 +24,7 @@ Asistan tahmin yürütmek yerine hesabı doğrudan Hukuk Eğitim'in kendi hesapl
 | `infaz-yatar` | Koşullu salıverilme, denetimli serbestlik ve bihakkın tahliye tarihleri |
 | `mal-rejimi-tasfiyesi` | Edinilmiş mallara katılma rejiminde katılma alacağı ve takas |
 | `mal-rejimi-deger-artis-payi` | Edinilmiş mallara katılma rejiminde değer artış payı |
+| `mal-rejimi-kredili-mal` | Kredili malda katılma alacağı (Yargıtay oranlaması: evlilik içinde ödenen taksitler) |
 | `arabuluculuk-ucreti` | Arabuluculuk ücreti (2026 tarifesi: nispi, saat ücreti, seri ve kira uyuşmazlıkları, taraf payı) |
 | `arabuluculuk-makbuz` | Arabuluculuk serbest meslek makbuzu dökümü |
 | `arabuluculuk-sureler` | Dava şartı arabuluculukta süreler ve son tarihler |
