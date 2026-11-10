@@ -16,23 +16,23 @@ Asistan tahmin yürütmek yerine hesabı doğrudan Hukuk Eğitim'in kendi hesapl
 
 | Araç | Ne hesaplar |
 |---|---|
-| `vekalet-ucreti` | Avukatlık Asgari Ücret Tarifesi'ne (2026-2027; 3 Kasım 2026 öncesi hesap tarihinde 2025-2026) göre nispi/maktu vekalet ücreti; ceza davaları, istinaf/temyiz, seri dava, icra, nafaka ve kira davaları |
+| `vekalet-ucreti` | Avukatlık Asgari Ücret Tarifesi'ne (2026-2027; 3 Kasım 2026 öncesi hesap tarihinde 2025-2026) göre nispi/maktu vekalet ücreti; ceza davaları, istinaf/temyiz, seri dava, icra, nafaka ve kira davaları, konusu para olmayan davalar, dava dışı işler, AYM/Sayıştay/Uyuşmazlık, vesayet ücreti |
 | `serbest-meslek-makbuzu` | Brüt–net, stopaj ve KDV dâhil/hariç dönüşümleri, makbuz kalemleri |
-| `iscilik-alacaklari` | Kıdem ve ihbar tazminatı, yıllık izin, fazla mesai, hafta tatili, UBGT, kötü niyet / işe iade / sendikal / ayrımcılık tazminatı; brüt ve net (2020-2026 kesinti parametreleri) |
+| `iscilik-alacaklari` | Kıdem ve ihbar tazminatı, yıllık izin, fazla mesai, hafta tatili, UBGT, kötü niyet / işe iade (ve işe başlatmama hâlinde kıdem-ihbar farkı) / sendikal / ayrımcılık tazminatı; brüt ve net (2020-2026 kesinti parametreleri, 2020-2021 AGİ) |
 | `maas-brut-net` | Aylık bordro: brütten nete veya netten brüte maaş (SGK, işsizlik, gelir ve damga vergisi; 2020-2026) |
 | `faiz-hesaplama` | Yasal, ticari avans, reeskont veya özel oranla faiz; dönem dönem oran tablosu (2000'den bugüne), kısmi ödeme mahsubu (TBK m.100) |
-| `arac-deger-kaybi` | Araç değer kaybı (1 Temmuz 2026 öncesi mülga Ek-1 formülü, sonrası ikinci el değer farkı) |
-| `infaz-yatar` | Koşullu salıverilme, denetimli serbestlik ve bihakkın tahliye tarihleri (geçici m.10/6, mükerrir, çocuk, taksirli suçlar, geri alma, özel infaz usulleri) |
+| `arac-deger-kaybi` | Araç değer kaybı (ikinci el değer farkı; 1 Temmuz 2026 öncesi kazalarda sigorta pratiği olarak mülga Ek-1 formülü), sigortacıya başvuru ve dava tarihleri (resmî tatiller dikkate alınır) |
+| `infaz-yatar` | Koşullu salıverilme, denetimli serbestlik ve bihakkın tahliye tarihleri (geçici m.10/6, mükerrir, çocuk, taksirli suçlar, koşullu salıverilmenin geri alınması, özel infaz usulleri; yıl ve ay resmî takvime göre) |
 | `mal-rejimi-tasfiyesi` | Edinilmiş mallara katılma rejiminde katılma alacağı ve takas |
 | `mal-rejimi-deger-artis-payi` | Edinilmiş mallara katılma rejiminde değer artış payı |
 | `mal-rejimi-kredili-mal` | Kredili malda katılma alacağı (Yargıtay oranlaması: evlilik içinde ödenen taksitler) |
 | `arabuluculuk-ucreti` | Arabuluculuk ücreti (2026 tarifesi: nispi, saat ücreti, seri ve kira uyuşmazlıkları, taraf payı) |
 | `arabuluculuk-makbuz` | Arabuluculuk serbest meslek makbuzu dökümü |
-| `arabuluculuk-sureler` | Dava şartı arabuluculukta süreler ve son tarihler |
-| `zamanasimi-ozel-hukuk` | Özel hukukta zamanaşımı (kesilme ve durma ile; tüketici, çek, taşıma, sigorta türleri) |
+| `arabuluculuk-sureler` | Dava şartı arabuluculukta süreler ve son tarihler (isteğe bağlı resmî tatil kaydırması, HMK m.93) |
+| `zamanasimi-ozel-hukuk` | Özel hukukta zamanaşımı (kesilme ve durma ile; tüketici, çek, taşıma, sigorta türleri; çek ibrazında resmî tatil uzatması) |
 | `zamanasimi-ceza-dava` | Ceza davası zamanaşımı |
 | `zamanasimi-ceza-infaz` | Ceza infaz zamanaşımı |
-| `tazminat-destekten-yoksun-kalma` | Ölüm: destekten yoksun kalma tazminatı |
+| `tazminat-destekten-yoksun-kalma` | Ölüm: destekten yoksun kalma tazminatı (askerlik, AYİM evlenme indirimi, eşin yeniden evlenmesi) |
 | `tazminat-surekli-is-goremezlik` | Sürekli iş göremezlik tazminatı |
 | `tazminat-gecici-is-goremezlik` | Geçici iş göremezlik tazminatı |
 | `tazminat-bakici-gideri` | Bakıcı gideri tazminatı |
