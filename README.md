@@ -12,23 +12,24 @@ Asistan tahmin yürütmek yerine hesabı doğrudan Hukuk Eğitim'in kendi hesapl
 
 ## Araçlar
 
-Şu an **19 araç** yayında:
+Şu an **20 araç** yayında:
 
 | Araç | Ne hesaplar |
 |---|---|
-| `vekalet-ucreti` | Avukatlık Asgari Ücret Tarifesi'ne (2025-2026) göre nispi/maktu vekalet ücreti |
+| `vekalet-ucreti` | Avukatlık Asgari Ücret Tarifesi'ne (2026-2027; 3 Kasım 2026 öncesi hesap tarihinde 2025-2026) göre nispi/maktu vekalet ücreti; ceza davaları, istinaf/temyiz, seri dava, icra, nafaka ve kira davaları |
 | `serbest-meslek-makbuzu` | Brüt–net, stopaj ve KDV dâhil/hariç dönüşümleri, makbuz kalemleri |
-| `iscilik-alacaklari` | Kıdem ve ihbar tazminatı, yıllık izin, fazla mesai, hafta tatili, UBGT; brüt ve net (SGK, vergi, damga, asgari ücret istisnası) |
-| `maas-brut-net` | Aylık bordro: brütten nete veya netten brüte maaş (SGK, işsizlik, gelir ve damga vergisi) |
+| `iscilik-alacaklari` | Kıdem ve ihbar tazminatı, yıllık izin, fazla mesai, hafta tatili, UBGT, kötü niyet / işe iade / sendikal / ayrımcılık tazminatı; brüt ve net (2020-2026 kesinti parametreleri) |
+| `maas-brut-net` | Aylık bordro: brütten nete veya netten brüte maaş (SGK, işsizlik, gelir ve damga vergisi; 2020-2026) |
+| `faiz-hesaplama` | Yasal, ticari avans, reeskont veya özel oranla faiz; dönem dönem oran tablosu (2000'den bugüne), kısmi ödeme mahsubu (TBK m.100) |
 | `arac-deger-kaybi` | Araç değer kaybı (1 Temmuz 2026 öncesi mülga Ek-1 formülü, sonrası ikinci el değer farkı) |
-| `infaz-yatar` | Koşullu salıverilme, denetimli serbestlik ve bihakkın tahliye tarihleri |
+| `infaz-yatar` | Koşullu salıverilme, denetimli serbestlik ve bihakkın tahliye tarihleri (geçici m.10/6, mükerrir, çocuk, taksirli suçlar, geri alma, özel infaz usulleri) |
 | `mal-rejimi-tasfiyesi` | Edinilmiş mallara katılma rejiminde katılma alacağı ve takas |
 | `mal-rejimi-deger-artis-payi` | Edinilmiş mallara katılma rejiminde değer artış payı |
 | `mal-rejimi-kredili-mal` | Kredili malda katılma alacağı (Yargıtay oranlaması: evlilik içinde ödenen taksitler) |
 | `arabuluculuk-ucreti` | Arabuluculuk ücreti (2026 tarifesi: nispi, saat ücreti, seri ve kira uyuşmazlıkları, taraf payı) |
 | `arabuluculuk-makbuz` | Arabuluculuk serbest meslek makbuzu dökümü |
 | `arabuluculuk-sureler` | Dava şartı arabuluculukta süreler ve son tarihler |
-| `zamanasimi-ozel-hukuk` | Özel hukukta zamanaşımı (kesilme ve durma ile) |
+| `zamanasimi-ozel-hukuk` | Özel hukukta zamanaşımı (kesilme ve durma ile; tüketici, çek, taşıma, sigorta türleri) |
 | `zamanasimi-ceza-dava` | Ceza davası zamanaşımı |
 | `zamanasimi-ceza-infaz` | Ceza infaz zamanaşımı |
 | `tazminat-destekten-yoksun-kalma` | Ölüm: destekten yoksun kalma tazminatı |
@@ -55,14 +56,15 @@ claude mcp add --transport http hukukegitim-hesaplama https://mcp.hukukegitim.co
 Bağlayıcıyı ekledikten sonra yeni bir sohbette şunu yazın. Asistan araçları listeler ve bu hesaplamalar için bağlayıcıyı kullanmayı hafızasına kaydeder (hafıza özelliği olan asistanlarda):
 
 ```text
-Hukuk Eğitim Hesaplama bağlayıcısındaki hesaplama araçlarını listele ve her birinin ne işe yaradığını kısaca yaz. Sonra şunu hafızana kaydet: vekâlet ücreti, serbest meslek makbuzu, işçilik alacakları, maaş brüt/net, araç değer kaybı, infaz, mal rejimi tasfiyesi, arabuluculuk ücreti, zamanaşımı veya tazminat hesabı gündeme geldiğinde, kendin hesaplamak yerine Hukuk Eğitim Hesaplama bağlayıcısını kullan ve sonuçtaki uyarıları ile yasal dayanağı kullanıcıya göster.
+Hukuk Eğitim Hesaplama bağlayıcısındaki hesaplama araçlarını listele ve her birinin ne işe yaradığını kısaca yaz. Sonra şunu hafızana kaydet: vekâlet ücreti, serbest meslek makbuzu, işçilik alacakları, maaş brüt/net, araç değer kaybı, infaz, mal rejimi tasfiyesi, arabuluculuk ücreti, zamanaşımı, faiz veya tazminat hesabı gündeme geldiğinde, kendin hesaplamak yerine Hukuk Eğitim Hesaplama bağlayıcısını kullan ve sonuçtaki uyarıları ile yasal dayanağı kullanıcıya göster.
 ```
 
 ## Deneyin
 
 | Soru | Beklenen sonuç |
 |---|---|
-| "2,5 milyon TL'lik asliye davasında vekalet ücreti ne olur?" | 367.000 TL |
+| "2,5 milyon TL'lik asliye davasında vekalet ücreti ne olur?" | 374.000 TL (2026-2027 AAÜT) |
+| "100.000 TL için 1 Ocak – 31 Aralık 2024 arası yasal faiz?" | 17.753,43 TL |
 | "Net 12.345,67 TL KDV hariç makbuz kes, stopaj %20, KDV %20" | KDV dâhil brüt 18.518,51 TL |
 | "Haziranda 45.000 TL brüt maaşın neti ne kadar?" | 34.720,48 TL |
 
